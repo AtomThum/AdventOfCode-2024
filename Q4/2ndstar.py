@@ -53,5 +53,9 @@ def findBigXMAS(y: int, x: int, text: np.array) -> int:
     else:
         return 0
 
-XMASAmount = sum(findBigXMAS(xIndex, yIndex, text) for xIndex, yIndex in itr.product(range(140), range(140)))
+
+XMASAmount = sum(
+    findBigXMAS(xIndex, yIndex, text)
+    for xIndex, yIndex in itr.product(range(140), range(140))
+)
 print(XMASAmount)
